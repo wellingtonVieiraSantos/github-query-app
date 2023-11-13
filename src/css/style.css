@@ -1,0 +1,252 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #131424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.init{
+  height: 50vh;
+  width: 50vw;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20%;
+}
+
+#search{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  gap: 4px;
+  margin-bottom: 2rem;
+}
+
+.search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.error{
+  width: 50%;
+  align-self: center;
+  font-size: 1.3rem;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 8px;
+  display: none;
+  box-shadow: 1px 1px 7px rgba(255, 0, 0, 0.7);
+}
+
+.show{
+  display: block;
+}
+
+input{
+  width: calc(50% - 88px);
+  margin: 10px 0;
+  padding: 10px 15px;
+  outline: none;
+  font-size: medium;
+}
+
+.info-profile{
+  width: 50%;
+  margin: auto;
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  padding: 10px 20px;
+  gap: 2vw;
+  position: relative;
+  cursor: default;
+}
+
+.info-profile img{
+  width: 30%;
+  border-radius: 50%;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.name-info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.login{
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: normal;
+  font-size: .9rem;
+}
+
+.location{
+  font-size: .9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.location img{
+  width: 25px;
+  filter: invert(100);
+}
+
+.num-rep{
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color:#646cff ;
+}
+
+.repos{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.title-repos{
+  margin: 2rem .5rem;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.repo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: max(49%, 320px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  text-align: left;
+  padding: 15px 25px;
+}
+
+.repo a{
+  text-decoration: none;
+  color:#646cff;
+}
+
+.repo p{
+  margin: 5px;
+}
+
+.lang{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 5px 0;
+}
+
+.circle{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.visibility{
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 15px;
+  border-radius: 40px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#app {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: .4rem;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+button {
+  width: 45px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  aspect-ratio: 1/1;
+}
+
+.btn-img{
+  width: 100%;
+  filter: invert(100) ;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (max-width: 1024px) {
+  input{
+   width: auto; 
+  }
+  .info-profile{
+    min-width: 300px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .info-profile > img{
+    width: 40%;
+  }
+  .info{
+    gap: 30px;
+  }
+}
